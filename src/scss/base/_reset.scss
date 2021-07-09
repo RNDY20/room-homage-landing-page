@@ -1,0 +1,26 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+}
+img {
+    max-width: 100%;
+}
+p {
+    line-height: 1.6;
+    color: $darkgray;
+    font-size: .813rem;
+}

@@ -1,0 +1,92 @@
+.c-main-nav {
+    position: absolute;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 999;
+
+    &.is-active {
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: background-color 300ms ease;
+    }
+
+    &__logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+        padding: 2.5rem 2rem;
+        width: 100%;
+        transform: translateX(-150%);
+        transition: transform 400ms ease;
+
+        @include breakpoint {
+            position: relative;
+            padding: 0;
+            transform: translateX(0);
+            transition: none;
+        }
+
+        &-wrapper {
+            display: inline-flex;
+        }
+
+        &.is-active {
+            transform: translateX(0);
+        }
+    }
+
+    &__link {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $black;
+        text-transform: lowercase;
+        margin-left: 2rem;
+
+        @include breakpoint {
+            font-size: .900rem;
+        }
+    }
+
+    @include breakpoint {
+        justify-content: flex-start;
+
+        &__logo {
+            width: 10%;
+            margin-top: .23rem;
+        }
+
+        &__list {
+            background-color: transparent;
+        }
+
+        &__link {
+            color: $white;
+            background:
+                linear-gradient(currentColor 0 0) bottom /var(--d, 0) 2px no-repeat;
+            transition: 0.3s;
+            padding-bottom: .80rem;
+            &:hover {
+                --d: 100%;
+            }
+        }
+
+        &__hamburger,
+        &__close {
+            display: none;
+        }
+    }
+}

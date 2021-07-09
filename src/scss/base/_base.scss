@@ -1,0 +1,14 @@
+body {
+    font-family: 'Spartan';
+}
+
+.animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+@include breakpoint{
+    .l-flex {
+        display: flex;
+    }
+}

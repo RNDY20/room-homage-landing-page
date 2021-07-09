@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+@import './abstracts/colors';
+@import './abstracts/media-queries';
+
+@import './base/reset';
+@import './base/base';
+
+@import './layout/header';
+@import './layout/about';
+
+@import './components/nav';
+@import './components/button';
+@import './components/slider';

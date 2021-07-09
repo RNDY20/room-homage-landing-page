@@ -1,0 +1,74 @@
+.intro {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &>.c-btn__container {
+        display: none;
+        @include breakpoint {
+            display: flex;
+            left: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin: 2rem 0 1rem 0;
+        @include breakpoint {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        @include breakpoint {
+            min-height: 45%;
+        }
+        &.is-active {
+            opacity: 1;
+            position: relative;
+        }
+
+        &--inline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            max-width: 16.5rem;
+            bottom: 0;
+            position: initial;
+            margin: 4rem 0;
+            opacity: 1;
+            @include breakpoint {
+                margin: 0;
+                display: inline-flex;
+                flex-direction: row;
+                min-height: 10%;
+                
+            }
+            &>a {
+                letter-spacing: .80rem;
+                color: $black;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 1rem;
+                transition: color 300ms ease;
+                &:hover {
+                    color: $darkgray;
+                }
+            }
+        }
+    }
+    @include breakpoint {
+        width: 68%;
+        padding: 0 2rem;
+    }
+}
